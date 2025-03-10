@@ -114,12 +114,12 @@ const Table = ({
     <>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse table-auto border border-accent">
-          <thead className="bg-blue-950 text-left text-white">
+          <thead className="bg-accent text-left text-white">
             <tr>
               {columns.map((column) => (
                 <th
                   key={String(column.key)}
-                  className={`px-4 py-4 text-sm text-center font-medium border border-gray-300 ${column.className || ""}`}
+                  className={`p-3 text-[12px] text-center font-medium border border-gray-300 ${column.className || ""}`}
                 >
                   {column.header}
                 </th>
@@ -135,7 +135,7 @@ const Table = ({
                 {columns.map((column) => (
                  <td
                  key={`${keyExtractor(row)}-${String(column.key)}`}
-                 className={`p-4 text-sm text-gray-600 border border-gray-300 text-center ${column.className || ""}`}
+                 className={`px-2 py-3 text-sm text-gray-600 border border-gray-300 text-center ${column.className || ""}`}
                >
                  {column.render
                    ? column.render(row[column.key], row)

@@ -92,7 +92,7 @@ const Header = () => {
               </div>
             </div>
           ) : (
-            <Link to={paths.Login} className="hover:text-accent transition">
+            <Link to={paths.Login} className="hover:underline transition">
               Login
             </Link>
           )}
