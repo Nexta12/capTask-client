@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "pm2 start npm --name 'exapsuites' -- run preview -- --host 0.0.0.0",
-    "deploy": "pm2 restart exapsuites"
+    "start": "pm2 start npm --name 'captask-client' -- run preview -- --host 0.0.0.0",
+    "deploy": "pm2 restart captask-client"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",

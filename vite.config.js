@@ -24,8 +24,8 @@ export default defineConfig({
     },
   },
   preview: {
-    port: 3003,
-    allowedHosts: ['exapsuites.revplusclients.com']
+    port: 3004,
+    allowedHosts: ['captask.dataactions.com']
   },
  
 });
