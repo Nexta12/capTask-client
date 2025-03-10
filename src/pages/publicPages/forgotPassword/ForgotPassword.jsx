@@ -6,7 +6,6 @@ import { ErrorFormatter } from "@pages/errorPages/ErrorFormatter";
 import { paths } from "@routes/paths";
 import { setLocalStorageItem } from "@utils/localStorage";
 import { useState } from "react";
-import { FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const ForgotPassword = () => {
@@ -60,7 +59,7 @@ const ForgotPassword = () => {
     
         <div className=" z-20 w-[80%] lg:w-[40%] bg-sky-600 p-5 rounded-md shadow-2xl ">
                <AlertMessage alert={message} />
-              <h3 className="h3 text-white flex items-center gap-x-2 justify-center">ForgotPassword <FaLock title="Secured by Next securities" className="text-black"/> </h3>
+              <h3 className="h3 text-white flex items-center gap-x-2 justify-center">Forgot Password  </h3>
             <form action="" onSubmit={handleSubmit} >
                 <InputField placeholder='Email' name="email" onChange={(e)=> setEmail(e.target.value) } value={email} required />
                 

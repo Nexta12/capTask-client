@@ -67,7 +67,7 @@ const Table = ({
         <button
           key="1"
           onClick={() => onPageChange(1)}
-          className="px-3 py-1 border rounded bg-accent text-white"
+          className="px-3 py-1 border rounded bg-sky-600 text-white"
         >
           1
         </button>,
@@ -83,7 +83,7 @@ const Table = ({
           onClick={() => onPageChange(i)}
           className={`px-3 py-1 border rounded ${
             i === currentPage
-              ? "bg-accent text-white"
+              ? "bg-sky-500 text-white"
               : "bg-black text-white"
           }`}
         >
@@ -114,7 +114,7 @@ const Table = ({
     <>
       <div className="overflow-x-auto">
         <table className="min-w-full border-collapse table-auto border border-accent">
-          <thead className="bg-black/80 text-left text-white">
+          <thead className="bg-blue-950 text-left text-white">
             <tr>
               {columns.map((column) => (
                 <th

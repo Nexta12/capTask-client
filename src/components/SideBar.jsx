@@ -13,7 +13,7 @@ const SideBar = () => {
     user.role !== UserRole.EMPLOYEE ? DashMiddleMenu : GuestDashenu;
 
   return (
-    <div className="hidden lg:flex flex-col bg-neutral-900 min-w-56  text-white ">
+    <div className="hidden lg:flex flex-col bg-blue-950 min-w-56  text-white ">
       {/* Top Part */}
       <Link to={paths.Index}>
         <div className="px-3  mt-5 mb-7 cursor-pointer">
@@ -30,7 +30,7 @@ const SideBar = () => {
         })}
       </div>
       {/*  bottom Part */}
-      <div className="border-t border-yellow-900 pt-3">
+      <div className="border-t border-white pt-3">
         {DashBottomMenu.filter((item) => {
           // If the user is an EMPLOYEE and the item title is "Notes", exclude it
           if (user.role === UserRole.EMPLOYEE && item.title === "Notes") {
@@ -59,12 +59,12 @@ function SideBarLink({ item, pathname, onClick }) {
     <Link
       to={item.link}
       className={` ${
-        isActive ? "bg-amber-600" : ""
-      } flex items-center px-3 gap-x-3 mb-2 rounded-sm py-2 group hover:bg-amber-600 transition-all duration-300 ease-in-out `}
+        isActive ? "bg-sky-600" : ""
+      } flex items-center px-3 gap-x-3 mb-2 rounded-sm py-2 group hover:bg-sky-600 transition-all duration-300 ease-in-out `}
       onClick={onClick}
     >
       <span className="text-xl">
-        <Icon className="text-yellow-500 group-hover:text-black " />
+        <Icon className="text-white " />
       </span>
       <span className="">{item.title}</span>
     </Link>

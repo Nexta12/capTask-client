@@ -355,17 +355,17 @@ const AdminHeader = () => {
           ref={sidebarRef}
           className={`${
             !sideBarToggle && "-translate-x-full xl:translate-x-0"
-          } absolute transition-all duration-300  lg:hidden w-screen overflow-hidden top-[82px] z-30 h-[calc(100vh-82px)] bg-white `}
+          } absolute transition-all duration-300  lg:hidden w-screen overflow-hidden top-[82px] z-30 h-[calc(100vh-82px)] bg-blue-950 text-white `}
         >
           <div className="w-full flex flex-col justify-between h-full">
             {/* Middle Part */}
             <div className="flex-2 ">
               <Link
                 to={paths.Index}
-                className="flex items-center px-3 gap-x-3 mb-2 rounded-sm py-2 group hover:bg-amber-600 transition-all duration-300 ease-in-out"
+                className="flex items-center px-3 gap-x-3 mb-2 rounded-sm py-2 group hover:bg-sky-500 transition-all duration-300 ease-in-out"
               >
                 <span className="text-xl">
-                  <BsHouse className="text-yellow-500 group-hover:text-black " />
+                  <BsHouse className="text-white group-hover:text-black " />
                 </span>
 
                 <span className="">Homepage</span>
@@ -384,7 +384,7 @@ const AdminHeader = () => {
             </div>
             {/*  bottom Part */}
 
-            <div className="border-t border-yellow-900 pt-3">
+            <div className="border-t border-white pt-3">
               {DashBottomMenu.map((item, index) => (
                 <SideBarLink
                   key={index}
@@ -429,11 +429,11 @@ function SideBarLink({ item, handleSidebarToggle, pathname }) {
         onClick={() => handleSidebarToggle()}
         to={item.link}
         className={`${
-          isActive ? "bg-amber-600 text-white" : ""
-        } flex items-center px-3 gap-x-3 mb-2 rounded-sm py-2 group hover:bg-amber-600 transition-all duration-300 ease-in-out `}
+          isActive ? "bg-sky-500 text-white" : ""
+        } flex items-center px-3 gap-x-3 mb-2 rounded-sm py-2 group hover:bg-sky-600 transition-all duration-300 ease-in-out `}
       >
         <span className="text-xl">
-          <Icon className="text-yellow-500 group-hover:text-black " />
+          <Icon className="text-white group-hover:text-black " />
         </span>
 
         <span className="">{item.title}</span>
