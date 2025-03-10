@@ -93,7 +93,7 @@ const Login = () => {
               onChange={handleChange}
               required
             />
-            <button type="submit" className="btn btn-secondary bg-neutral-600 hover:bg-black/65 w-full py-2 rounded-sm mb-4 ">
+            <button type="submit" className="btn btn-primary w-full py-2 rounded-sm mb-4 ">
               {isLoading ? "Please Wait..." : "Submit"}
             </button>
             <p>

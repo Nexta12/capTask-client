@@ -118,7 +118,7 @@ const CreateTask = () => {
         <div className="w-full mt-5">
           <button
             type="submit"
-            className="btn btn-primary bg-blue-500 py-2 rounded-sm mx-auto"
+            className="btn btn-primary py-2 rounded-sm mx-auto"
           >
             {isLoading ? "Please wait..." : "Submit"}
           </button>
