@@ -181,8 +181,8 @@ const AddUser = () => {
               
               </div>
 
-              <div className="flex flex-col md:flex-row items-center justify-between gap-3 my-3">
-              <div className="w-full !mt-[-15px]">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-y-4 my-3">
+              <div className="w-full mb-2">
                   <EnhancedSelect
                     name="role"
                     id="role"
@@ -193,7 +193,7 @@ const AddUser = () => {
                     required
                   />
                 </div>
-                <div className="w-full !mt-[-15px]">
+                <div className="w-full mb-2 ">
                   <EnhancedSelect
                     name="department"
                     id="department"
@@ -204,7 +204,7 @@ const AddUser = () => {
                     required
                   />
                 </div>
-                <div className="w-full !mt-[-15px]">
+                <div className="w-full mb-2 ">
                   <EnhancedSelect
                     name="position"
                     id="position"
