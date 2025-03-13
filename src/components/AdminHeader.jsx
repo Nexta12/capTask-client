@@ -378,6 +378,7 @@ const AdminHeader = () => {
                     item={item}
                     handleSidebarToggle={handleSidebarToggle}
                     pathname={pathname}
+                   
                   />
                 );
               })}
@@ -396,9 +397,7 @@ const AdminHeader = () => {
                         key={index}
                         item={item}
                         pathname={pathname}
-                        onClick={
-                          item.title === "Logout" ? () => logout(navigate) : undefined
-                        }
+                       
                       />
                     ))}
                   </div>
@@ -432,10 +431,19 @@ const AdminHeader = () => {
 function SideBarLink({ item, handleSidebarToggle, pathname }) {
   const Icon = item.icon;
   const isActive = pathname === item.link || pathname.includes(item.link);
+  const {logout} = useAuthStore();
+  const navigate = useNavigate();
   return (
     <>
       <Link
-        onClick={() => handleSidebarToggle()}
+        onClick={(e) => {
+          if (item.title === "Logout") {
+            e.preventDefault(); // Prevent default navigation
+            logout(navigate);
+          } else {
+            handleSidebarToggle();
+          }
+        }}
         to={item.link}
         className={`${
           isActive ? "bg-sky-500 text-white" : ""
