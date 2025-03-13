@@ -34,7 +34,7 @@ const EditProfile = () => {
   const getFilteredRoles = (currentUserRole) => {
     const currentUserLevel = roleLevels[currentUserRole];
     return totaluserRole.filter(
-      (role) => roleLevels[role.value] < currentUserLevel
+      (role) => roleLevels[role.value] <= currentUserLevel
     );
   };
 
@@ -188,8 +188,9 @@ const EditProfile = () => {
                   value={userData.address}
                 />
               </div>
-
+            
               <div className="flex flex-col md:flex-row items-center justify-between gap-3 my-3">
+              {user.role !== UserRole.EMPLOYEE && (
                 <div className="w-full !mt-[-15px]">
                   <EnhancedSelect
                     name="role"
@@ -198,9 +199,9 @@ const EditProfile = () => {
                     options={getFilteredRoles(user.role)}
                     value={userData.role}
                     onChange={handleInputChange}
-                    required
                   />
                 </div>
+                    )}
                 <div className="w-full !mt-[-15px]">
                   <EnhancedSelect
                     name="department"
@@ -209,7 +210,6 @@ const EditProfile = () => {
                     options={totalDepartments}
                     value={userData.department}
                     onChange={handleInputChange}
-                    required
                   />
                 </div>
                 <div className="w-full !mt-[-15px]">
@@ -220,10 +220,10 @@ const EditProfile = () => {
                     options={totalPosition}
                     value={userData.position}
                     onChange={handleInputChange}
-                    required
                   />
                 </div>
               </div>
+            
               <EnhancedTextArea
                 name="description"
                 id="description"
