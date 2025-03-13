@@ -82,7 +82,6 @@ const Login = () => {
               name='email'
               value={values.email}
               onChange={handleChange}
-              autoFocus
               required
             />
             <InputField

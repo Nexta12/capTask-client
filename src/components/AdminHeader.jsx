@@ -355,9 +355,9 @@ const AdminHeader = () => {
           ref={sidebarRef}
           className={`${
             !sideBarToggle && "-translate-x-full xl:translate-x-0"
-          } absolute transition-all duration-300  lg:hidden w-screen overflow-hidden top-[82px] z-30 h-[calc(100vh-82px)] bg-blue-950 text-white `}
+          } absolute transition-all duration-300  lg:hidden w-screen overflow-hidden top-[82px] z-30 h-[calc(100vh-82px)] bg-accent text-white   `}
         >
-          <div className="w-full flex flex-col justify-between h-full">
+          <div className="w-full flex flex-col justify-between h-[calc(100vh-82px)] fixed">
             {/* Middle Part */}
             <div className="flex-2 ">
               <Link
