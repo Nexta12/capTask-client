@@ -180,9 +180,9 @@ const AdminHeader = () => {
   };
 
   // Choose Which Menu to display
-  const DashBoardMenu =
-    user.role !== UserRole.guest ? DashMiddleMenu : GuestDashenu;
-
+    const DashBoardMenu =
+    user.role !== UserRole.EMPLOYEE ? DashMiddleMenu : GuestDashenu;
+    
   return (
     <>
       <div className="relative bg-white w-ful py-5 shadow-sm flex items-center justify-between gap-x-4">
@@ -383,17 +383,26 @@ const AdminHeader = () => {
               })}
             </div>
             {/*  bottom Part */}
+              {/*  bottom Part */}
+                  <div className="border-t border-white pt-3">
+                    {DashBottomMenu.filter((item) => {
+                      // If the user is an EMPLOYEE and the item title is "Notes", exclude it
+                      if (user.role === UserRole.EMPLOYEE && item.title === "Notes") {
+                        return false;
+                      }
+                      return true;
+                    }).map((item, index) => (
+                      <SideBarLink
+                        key={index}
+                        item={item}
+                        pathname={pathname}
+                        onClick={
+                          item.title === "Logout" ? () => logout(navigate) : undefined
+                        }
+                      />
+                    ))}
+                  </div>
 
-            <div className="border-t border-white pt-3">
-              {DashBottomMenu.map((item, index) => (
-                <SideBarLink
-                  key={index}
-                  item={item}
-                  handleSidebarToggle={handleSidebarToggle}
-                  pathname={pathname}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </div>
